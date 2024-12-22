@@ -1,12 +1,51 @@
-// import { useContext, } from "react";
+import { useContext, } from "react";
 import { NavLink } from "react-router-dom";
 import Image1 from "/assets/PastFinder1.jpg";
-// import { AuthContext } from "../../Provider/AuthProvider";
-// import { FaUserCircle} from "react-icons/fa";
+import { FaUserCircle} from "react-icons/fa";
+import { AuthContext } from "../../Provider/AuthProvider";
 const Navbar = () => {
-  // const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
-
+const linkDrop = (
+  <>
+    <li className="hover:bg-gradient-to-r hover:from-yellow-900 hover:via-orange-900 hover:to-red-900 hover:text-white font-semibold hover:rounded-2xl">
+    <NavLink
+      to="/"
+      className={({ isActive }) =>
+        isActive
+          ? "bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white font-semibold rounded-2xl px-3 py-2"
+          : "px-3 py-2"
+      }
+    >
+      My Profile
+    </NavLink>
+  </li>
+  <li className="hover:bg-gradient-to-r hover:from-yellow-900 hover:via-orange-900 hover:to-red-900 hover:text-white font-semibold hover:rounded-2xl">
+    <NavLink
+      to="/"
+      className={({ isActive }) =>
+        isActive
+          ? "bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white font-semibold rounded-2xl px-3 py-2"
+          : "px-3 py-2"
+      }
+    >
+      My Artifacts
+    </NavLink>
+  </li>
+  <li className="hover:bg-gradient-to-r hover:from-yellow-900 hover:via-orange-900 hover:to-red-900 hover:text-white font-semibold hover:rounded-2xl">
+    <NavLink
+      to="/"
+      className={({ isActive }) =>
+        isActive
+          ? "bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white font-semibold rounded-2xl px-3 py-2"
+          : "px-3 py-2"
+      }
+    >
+      Liked Artifacts
+    </NavLink>
+  </li>
+  </>
+);
 
   const links = (
 <>
@@ -35,7 +74,7 @@ const Navbar = () => {
     All Artifacts
 </NavLink>
   </li>
-  {/* {user?.email && ( */}
+  {user?.email && (
   <li className="hover:bg-gradient-to-r hover:from-yellow-900 hover:via-orange-900 hover:to-red-900 hover:text-white font-semibold hover:rounded-2xl">
     <NavLink
       to="addArtifacts"
@@ -49,7 +88,7 @@ const Navbar = () => {
     </NavLink>
   </li>
   
-    {/* )} */}
+    )}
 
 
   <li className="hover:bg-gradient-to-r hover:from-yellow-900 hover:via-orange-900 hover:to-red-900 hover:text-white font-semibold hover:rounded-2xl">
@@ -123,19 +162,38 @@ const Navbar = () => {
         <ul className="menu menu-horizontal gap-2 px-1 text-xl">{links}</ul>
       </div>
 
+{/* User Profile & Log In */}
       <div className="navbar-end flex items-center gap-4">
-        {/* User Profile & Log In */}
-        {/* <div className="flex items-center  border p-2 rounded-3xl border-yellow-300">
+        
+        <div className="flex items-center  border p-2 rounded-3xl border-yellow-300">
           {user?.email ? (
-            
-    <NavLink to="myProfile">
-      
-    <img
-      className="w-12 h-12 mr-1 rounded-full border-2 border-yellow-500"
-      alt={user?.displayName}
-      src={user?.photoURL}
-    />
-  </NavLink>
+
+<div className="dropdown">
+  {/* Dropdown button */}
+  <button
+    tabIndex={0}
+    className="btn btn-ghost btn-circle avatar"
+    aria-label="Open user menu"
+  >
+    <div className="w-10 rounded-full">
+      <img
+        className="w-12 h-12 rounded-full border-2 border-yellow-500"
+        alt={user?.displayName}
+        src={user?.photoURL}
+      />
+    </div>
+  </button>
+
+  {/* Dropdown menu */}
+  <ul
+    tabIndex={0}
+    className="menu menu-sm dropdown-content bg-base-100 dark:bg-gray-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+  >
+    {linkDrop}
+  </ul>
+</div>
+
+
   
           ) : (
             
@@ -156,7 +214,7 @@ const Navbar = () => {
               Log In
             </NavLink>
           )}
-        </div> */}
+        </div>
 
       </div>
       
