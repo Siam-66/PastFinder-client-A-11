@@ -22,7 +22,7 @@ const linkDrop = (
   </li>
   <li className="hover:bg-gradient-to-r hover:from-yellow-900 hover:via-orange-800 hover:to-red-900 hover:text-white font-semibold hover:rounded-2xl">
     <NavLink
-      to="/"
+      to="myArtifacts"
       className={({ isActive }) =>
         isActive
           ? "bg-gradient-to-r from-yellow-900 via-orange-800 to-red-900 text-white font-semibold rounded-2xl px-3 py-2"
@@ -34,7 +34,7 @@ const linkDrop = (
   </li>
   <li className="hover:bg-gradient-to-r hover:from-yellow-900 hover:via-orange-800 hover:to-red-900 hover:text-white font-semibold hover:rounded-2xl">
     <NavLink
-      to="/"
+      to="likedArtifacts"
       className={({ isActive }) =>
         isActive
           ? "bg-gradient-to-r from-yellow-900 via-orange-800 to-red-900 text-white font-semibold rounded-2xl px-3 py-2"

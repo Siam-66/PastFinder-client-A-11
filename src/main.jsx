@@ -16,9 +16,9 @@ import PrivateRoute from './routes/PrivateRoute';
 import Signup from './Component/LogSign/Signup';
 import Login from './Component/LogSign/Login';
 import ForgetPassword from './Component/LogSign/ForgetPassword';
-import MyProfile from './Component/Layout/UserProfile/MyProfile';
-import LikedArtifacts from './Component/Layout/UserProfile/LikedArtifacts';
-import MyArtifacts from './Component/Layout/UserProfile/MyArtifacts';
+import MyProfile from './Component/Pages/UserProfile/MyProfile';
+import LikedArtifacts from './Component/Pages/UserProfile/LikedArtifacts';
+import MyArtifacts from './Component/Pages/UserProfile/MyArtifacts';
 import ArtifactDetails from './Component/Pages/ArtifactDetails';
 
 const router = createBrowserRouter([
@@ -71,18 +71,21 @@ const router = createBrowserRouter([
       },
       {
         path: "myProfile", 
-        element:
-          <MyProfile/>,
+        element:<PrivateRoute>
+          <MyProfile/>
+        </PrivateRoute>,
       },
       {
         path: "likedArtifacts", 
-        element:
-          <LikedArtifacts/>,
+        element:<PrivateRoute>
+          <LikedArtifacts/>
+        </PrivateRoute>,
       },
       {
         path: "myArtifacts", 
-        element:
-          <MyArtifacts/>,
+        element:<PrivateRoute>
+          <MyArtifacts/>
+        </PrivateRoute>,
       }
 
     ],

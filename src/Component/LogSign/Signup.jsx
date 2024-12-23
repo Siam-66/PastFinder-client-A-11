@@ -1,69 +1,70 @@
 import { useContext, useState } from "react";
-import { data, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 // import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import GoogleLoginButton from "./GoogleLoginButton";
 
 const Signup = () => {
-    const { createNewUser  } = useContext(AuthContext);
+    const { createNewUser , updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
     const [error, setError] = useState({});
     const [passwordVisible, setPasswordVisible] = useState(false);
 
     const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const from = new FormData(e.target);
-    const name = from.get("name");
-    const email = from.get("email");
-    const photo = from.get("photo");
-    const password = from.get("password");
-
-    // error 
-    let newError = {};
-
-    if (name.length < 5) {
-    newError.name = "Name must be more than 5 characters long.";
-    }
-
-    if (!/\S+@\S+\.\S+/.test(email)) {
+      e.preventDefault();
+    
+      const from = new FormData(e.target);
+      const name = from.get("name");
+      const email = from.get("email");
+      const photo = from.get("photo");
+      const password = from.get("password");
+    
+      // Validation errors
+      let newError = {};
+    
+      if (name.length < 5) {
+        newError.name = "Name must be more than 5 characters long.";
+      }
+    
+      if (!/\S+@\S+\.\S+/.test(email)) {
         newError.email = "Please enter a valid email address.";
-    }
-
-    const hasUppercase = /[A-Z]/.test(password);
-    const hasLowercase = /[a-z]/.test(password);
-    const hasMinLength = password.length >= 6;
-
-    if (!hasUppercase) {
+      }
+    
+      const hasUppercase = /[A-Z]/.test(password);
+      const hasLowercase = /[a-z]/.test(password);
+      const hasMinLength = password.length >= 6;
+    
+      if (!hasUppercase) {
         newError.password = "Password must include at least one uppercase letter.";
-    } else if (!hasLowercase) {
+      } else if (!hasLowercase) {
         newError.password = "Password must include at least one lowercase letter.";
-    } else if (!hasMinLength) {
+      } else if (!hasMinLength) {
         newError.password = "Password must be more than 6 characters long.";
-    }
+      }
+    
+      if (Object.keys(newError).length > 0) {
+        setError(newError);
+        return;
+      }
+    
+      setError({});
 
-    if (Object.keys(newError).length > 0) {
-    setError(newError);
-    return;
-    }
-
-    setError({});
-
-    console.log(name, email, photo, password);
-
-    createNewUser(email, password)
-// add  fetch data  here
-
-
+      createNewUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        (user);
+        return updateUserProfile({ displayName: name, photoURL: photo });
+      })
       .then(() => {
         navigate("/");
       })
       .catch((err) => {
         console.error("Error creating user:", err);
       });
-  };
-
+     
+    };
+    
   return (
     <div className="flex items-center justify-center my-16 ">
       <div className="card bg-base-200 w-full max-w-sm shrink-0">
