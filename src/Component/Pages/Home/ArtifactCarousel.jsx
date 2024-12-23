@@ -10,27 +10,27 @@ const ArtifactCarousel = () => {
         {
             title: "Discover the Rosetta Stone",
             description: "Explore the artifact that unlocked the secrets of ancient Egyptian hieroglyphs.",
-            background: "https://i.ibb.co/xYFHPrm/1jp-card.jpg",
+            background: "https://i.ibb.co.com/2v7xBcd/1rosetta-stone.jpg",
         },
         {
             title: "The Antikythera Mechanism",
             description: "Learn about the ancient Greek device considered the first analog computer.",
-            background: "https://i.ibb.co/1Q1rnW4/africa1.jpg",
+            background: "https://i.ibb.co.com/FYL8zKM/2-The-Antikythera-Mysteries.jpg",
         },
         {
             title: "The Dead Sea Scrolls",
             description: "Dive into the ancient manuscripts that shed light on early religious texts.",
-            background: "https://i.ibb.co/wCP91BZ/bangladesh1.jpg",
+            background: "https://i.ibb.co.com/kKMT0y1/3-The-Not-So-Dead-Sea-Scrolls.jpg",
         },
         {
             title: "Terracotta Army",
             description: "Discover the life-sized sculptures guarding China’s first emperor’s tomb.",
-            background: "https://i.ibb.co/c6xqM85/2jp-card-jpg.jpg",
+            background: "https://i.ibb.co.com/KX5XmnF/4terracotta-army.jpg",
         },
         {
             title: "The Codex Gigas",
             description: "Uncover the world's largest medieval manuscript, shrouded in mystery.",
-            background: "https://i.ibb.co/6FhBdgq/switzerland1.jpg",
+            background: "https://i.ibb.co.com/KrpVdPz/5-The-Codex-Gigas.jpg",
         },
     ];
 
@@ -49,16 +49,17 @@ const ArtifactCarousel = () => {
             <Slider {...settings}>
                 {slides.map((slide, index) => (
                     <div key={index} className="relative h-[400px] md:h-[600px]">
-                        {/* Background Image */}
+                        {/* Background Img */}
                         <div
                             className="absolute inset-0"
                             style={{
                                 backgroundImage: `url(${slide.background})`,
                                 backgroundSize: "cover",
                                 backgroundPosition: "center",
-                                filter: "brightness(0.7)",
                             }}
                         ></div>
+                        {/* Dark Overlay */}
+                        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
                         {/* Content */}
                         <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4 text-white">
                             <Slide direction="down" triggerOnce>
@@ -66,7 +67,7 @@ const ArtifactCarousel = () => {
                                 <p className="mt-4 text-lg md:text-xl max-w-3xl">{slide.description}</p>
                                 <Link
                                     to="/artifactDetails"
-                                    className="mt-6 px-6 py-2 btn bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 text-lg text-black font-bold rounded-lg border-yellow-500"
+                                    className="mt-6 px-6 py-2 btn bg-gradient-to-r from-yellow-950 via-orange-900 to-red-950 text-lg text-white font-bold rounded-lg border-yellow-950"
                                 >
                                     Explore Artifacts
                                 </Link>

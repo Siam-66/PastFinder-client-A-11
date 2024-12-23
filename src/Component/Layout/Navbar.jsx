@@ -111,7 +111,7 @@ const linkDrop = (
   );
 
   return (
-    <div className="navbar bg-base-100/85 z-50 sticky top-0 text-black">
+    <div className="navbar bg-base-100/85 z-50 sticky top-0 ">
       <div className="navbar-start">
         <div className="dropdown">
           <button
