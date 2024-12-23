@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const AllArtifactsCard = ({ celestora }) => {
-    const { name, image, type, historicalContext } = celestora;
+    const { _id,name, image, type, historicalContext } = celestora;
 
 return (
     <div className="card bg-base-100 shadow-xl">
@@ -25,7 +25,7 @@ return (
         <div className="card-actions justify-center mt-5">
 
         <Link
-            to={`/artifactDetails/${name}`}
+            to={`/artifactDetails/${_id}`}
             className="btn bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-lg text-white font-bold rounded-xl"
         >
             View Details

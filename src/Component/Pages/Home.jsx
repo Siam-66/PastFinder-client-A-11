@@ -6,6 +6,7 @@ const Home = () => {
     return (
         <div>
             <ArtifactCarousel></ArtifactCarousel>
+            
             <TimelineSection></TimelineSection>
             <WhyChoose></WhyChoose>
         </div>

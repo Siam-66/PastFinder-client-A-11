@@ -19,6 +19,7 @@ import ForgetPassword from './Component/LogSign/ForgetPassword';
 import MyProfile from './Component/Layout/UserProfile/MyProfile';
 import LikedArtifacts from './Component/Layout/UserProfile/LikedArtifacts';
 import MyArtifacts from './Component/Layout/UserProfile/MyArtifacts';
+import ArtifactDetails from './Component/Pages/ArtifactDetails';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +42,13 @@ const router = createBrowserRouter([
                     <AddArtifacts />
                   </PrivateRoute>,
       },
-
+      {
+        path: '/artifactDetails/:id', 
+        element: <PrivateRoute>
+                    <ArtifactDetails />
+                  </PrivateRoute>,
+        loader:({params}) => fetch(`http://localhost:4000/celestora/${params.id}`)
+      },
       {
         path: "aboutUs", 
         element: <AboutUs /> ,
