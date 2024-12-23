@@ -112,7 +112,7 @@ const Signup = () => {
           {error.password && <label className="label text-red-600 text-sm">{error.password}</label>}
 
           <div className="form-control mt-6">
-            <button className="btn text-xl bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 text-black font-semibold">
+            <button className="btn text-xl bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white font-semibold">
               Sign Up
             </button>
           </div>

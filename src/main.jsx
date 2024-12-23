@@ -10,13 +10,15 @@ import ErrorPage from "./Component/Pages/ErrorPage";
 import Home from "./Component/Pages/Home";
 import AllArtifacts from "./Component/Pages/AllArtifacts";
 import AddArtifacts from "./Component/Pages/AddArtifacts";
-import MyArtifacts from "./Component/Pages/MyArtifacts";
 import AboutUs from "./Component/Pages/AboutUs";
 import AuthProvider from './Provider/AuthProvider';
 import PrivateRoute from './routes/PrivateRoute';
 import Signup from './Component/LogSign/Signup';
 import Login from './Component/LogSign/Login';
 import ForgetPassword from './Component/LogSign/ForgetPassword';
+import MyProfile from './Component/Layout/UserProfile/MyProfile';
+import LikedArtifacts from './Component/Layout/UserProfile/LikedArtifacts';
+import MyArtifacts from './Component/Layout/UserProfile/MyArtifacts';
 
 const router = createBrowserRouter([
   {
@@ -39,10 +41,7 @@ const router = createBrowserRouter([
                     <AddArtifacts />
                   </PrivateRoute>,
       },
-      {
-        path: "myArtifacts", 
-        element: <MyArtifacts /> ,
-      },
+
       {
         path: "aboutUs", 
         element: <AboutUs /> ,
@@ -61,11 +60,24 @@ const router = createBrowserRouter([
       },
       {
         path: "login", 
+        element:<Login/>,
+      },
+      {
+        path: "myProfile", 
         element:
-          <Login></Login>
-        ,
+          <MyProfile/>,
+      },
+      {
+        path: "likedArtifacts", 
+        element:
+          <LikedArtifacts/>,
+      },
+      {
+        path: "myArtifacts", 
+        element:
+          <MyArtifacts/>,
       }
-      
+
     ],
   },
 ]);

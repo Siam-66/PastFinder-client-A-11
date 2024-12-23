@@ -1,13 +1,9 @@
+import React from 'react';
 
 const MyArtifacts = () => {
     return (
         <div>
-            no need
-
-
-
-
-            
+            aaaaaaaaaaa
         </div>
     );
 };

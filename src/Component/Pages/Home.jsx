@@ -1,8 +1,9 @@
+import ArtifactCarousel from "./Home/ArtifactCarousel";
 
 const Home = () => {
     return (
         <div>
-            HIIIII
+            <ArtifactCarousel></ArtifactCarousel>
         </div>
     );
 };

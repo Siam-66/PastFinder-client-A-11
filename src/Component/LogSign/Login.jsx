@@ -94,13 +94,13 @@ const Login = () => {
                 Enter the valid password and try again.
               </label>
             )}
-            <button className="btn text-xl bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 text-black font-semibold">
+            <button className="btn text-xl bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white font-semibold">
               Login
             </button>
           </div>
           <p>
             Don't have an account? Why not
-            <Link to="/signup" className="link text-yellow-600 pl-2">
+            <Link to="/signup" className="link text-yellow-800 pl-2">
               Sign up
             </Link>
           </p>
@@ -109,7 +109,7 @@ const Login = () => {
         <div className="px-20 absolute top-[25rem] left-4">
           <button
             onClick={handleGoogleSignIn}
-            className="flex items-center justify-center rounded-2xl border border-yellow-500 py-1 w-full px-2"
+            className="flex items-center justify-center rounded-2xl border border-yellow-900 py-1 w-full px-2"
           >
             <FcGoogle className="mr-2 size-9" /> Sign in with Google
           </button>

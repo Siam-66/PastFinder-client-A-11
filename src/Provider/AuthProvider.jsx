@@ -23,25 +23,30 @@ export const AuthContext = createContext();
 
     console.log(user, loading);
 
+    // for sign in
     const createNewUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
     };
-
+    
+    // for log in
     const userLogin = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
     };
-
+    
+    // for log out
     const logOut = () => {
     setLoading(true);
     return signOut(auth).then(() => setUser(null));
     };
+    
 
     const updateUserProfile = (updatedData) => {
     return updateProfile(auth.currentUser, updatedData);
     };
-
+    
+    //google sign in
     const googleSignIn = () => {
     setLoading(true);
     const provider = new GoogleAuthProvider();
