@@ -7,9 +7,9 @@
         "createdAt": "196 BC (approximately)",
         "discoveredAt": "1799",
         "discoveredBy": "French soldiers",
-        "presentLocation": "British Museum, London",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "British Museum, London"
+        
+        
     },
     {
         "name": "Terracotta Army",
@@ -19,9 +19,9 @@
         "createdAt": "Around 210 BC",
         "discoveredAt": "1974",
         "discoveredBy": "Local farmers",
-        "presentLocation": "Terracotta Army Museum, Xi'an, China",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Terracotta Army Museum, Xi'an, China"
+        
+        
     },
     {
         "name": "Antikythera Mechanism",
@@ -31,9 +31,9 @@
         "createdAt": "2nd century BC (estimated)",
         "discoveredAt": "1900",
         "discoveredBy": "Sponge divers",
-        "presentLocation": "National Archaeological Museum, Athens, Greece",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "National Archaeological Museum, Athens, Greece"
+        
+        
     },
     {
         "name": "Lascaux Cave Paintings",
@@ -43,9 +43,9 @@
         "createdAt": "17,000 - 15,000 years ago (estimated)",
         "discoveredAt": "1940",
         "discoveredBy": "Four teenagers",
-        "presentLocation": "Lascaux IV (replica cave), Montignac, France (original cave closed to the public)",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Lascaux IV (replica cave), Montignac, France (original cave closed to the public)"
+        
+        
     },
     {
         "name": "Sutton Hoo Ship Burial",
@@ -55,9 +55,9 @@
         "createdAt": "7th century AD",
         "discoveredAt": "1939",
         "discoveredBy": "Edith Pretty (landowner)",
-        "presentLocation": "British Museum, London",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "British Museum, London"
+        
+        
     },
     {
         "name": "Tutankhamun's Mask",
@@ -67,9 +67,9 @@
         "createdAt": "1323 BC",
         "discoveredAt": "1925",
         "discoveredBy": "Howard Carter",
-        "presentLocation": "Egyptian Museum, Cairo",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Egyptian Museum, Cairo"
+        
+        
     },
     {
         "name": "Dead Sea Scrolls",
@@ -79,9 +79,9 @@
         "createdAt": "3rd century BC to 1st century AD",
         "discoveredAt": "1947",
         "discoveredBy": "Bedouin shepherds",
-        "presentLocation": "Israel Museum, Jerusalem",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Israel Museum, Jerusalem"
+        
+        
     },
     {
         "name": "Venus of Willendorf",
@@ -91,9 +91,9 @@
         "createdAt": "Around 28,000 BC",
         "discoveredAt": "1908",
         "discoveredBy": "Johann Veran",
-        "presentLocation": "Naturhistorisches Museum, Vienna",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Naturhistorisches Museum, Vienna"
+        
+        
     },
     {
         "name": "Nebra Sky Disc",
@@ -103,9 +103,9 @@
         "createdAt": "Around 1600 BC",
         "discoveredAt": "1999",
         "discoveredBy": "Treasure hunters",
-        "presentLocation": "Landesmuseum für Vorgeschichte Halle (Saale)",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Landesmuseum für Vorgeschichte Halle (Saale)"
+        
+        
     },
     {
         "name": "Olmec Colossal Heads",
@@ -115,11 +115,11 @@
         "createdAt": "1200-900 BC",
         "discoveredAt": "1920s",
         "discoveredBy": "Archaeologists",
-        "presentLocation": "Various museums in Mexico",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Various museums in Mexico"
+        
+        
     },
-    {
+        {
         "name": "Code of Hammurabi",
         "image": "https://en.wikipedia.org/wiki/File:Code-de-Hammurabi-1.jpg",
         "type": "Stele",
@@ -127,9 +127,9 @@
         "createdAt": "1754 BC",
         "discoveredAt": "1901",
         "discoveredBy": "Jean-Vincent Scheil",
-        "presentLocation": "Louvre Museum, Paris",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Louvre Museum, Paris"
+        
+        
     },
     {
         "name": "Bust of Nefertiti",
@@ -139,9 +139,9 @@
         "createdAt": "1345 BC",
         "discoveredAt": "1912",
         "discoveredBy": "Ludwig Borchardt",
-        "presentLocation": "Neues Museum, Berlin",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Neues Museum, Berlin"
+        
+        
     },
     {
         "name": "Shroud of Turin",
@@ -151,9 +151,9 @@
         "createdAt": "14th century (controversial)",
         "discoveredAt": "1354 (documented)",
         "discoveredBy": "Unknown",
-        "presentLocation": "Cathedral of Saint John the Baptist, Turin, Italy",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Cathedral of Saint John the Baptist, Turin, Italy"
+        
+        
     },
     {
         "name": "Moai Statues",
@@ -163,9 +163,9 @@
         "createdAt": "1250-1500 AD",
         "discoveredAt": "18th century",
         "discoveredBy": "European explorers",
-        "presentLocation": "Easter Island, Chile",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Easter Island, Chile"
+        
+        
     },
     {
         "name": "Ark of the Covenant",
@@ -175,68 +175,6 @@
         "createdAt": "15th century BC (approximate)",
         "discoveredAt": "Unknown (if it exists)",
         "discoveredBy": "Biblical accounts",
-        "presentLocation": "Unknown",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
-    },
-    {
-        "name": "Phaistos Disc",
-        "image": "https://en.wikipedia.org/wiki/File:Phaistos_disk.jpg",
-        "type": "Clay Disc",
-        "historicalContext": "Ancient Minoan artifact with undeciphered symbols.",
-        "createdAt": "2nd millennium BC",
-        "discoveredAt": "1908",
-        "discoveredBy": "Luigi Pernier",
-        "presentLocation": "Heraklion Archaeological Museum, Crete, Greece",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
-    },
-    {
-        "name": "Lycurgus Cup",
-        "image": "https://en.wikipedia.org/wiki/File:Lycurgus_Cup.jpg",
-        "type": "Roman Glass",
-        "historicalContext": "Ancient Roman glass cup exhibiting dichroic properties.",
-        "createdAt": "4th century AD",
-        "discoveredAt": "1800s",
-        "discoveredBy": "Unknown",
-        "presentLocation": "British Museum, London",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
-    },
-    {
-        "name": "Disk of Enheduanna",
-        "image": "https://en.wikipedia.org/wiki/File:Disk_of_Enheduanna.jpg",
-        "type": "Stone Disk",
-        "historicalContext": "A Sumerian disk depicting Enheduanna, the earliest known poet.",
-        "createdAt": "2300 BC",
-        "discoveredAt": "1927",
-        "discoveredBy": "Leonard Woolley",
-        "presentLocation": "Penn Museum, Philadelphia",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
-    },
-    {
-        "name": "Mask of Agamemnon",
-        "image": "https://en.wikipedia.org/wiki/File:MaskOfAgamemnon.jpg",
-        "type": "Gold Mask",
-        "historicalContext": "Gold funerary mask attributed to King Agamemnon of Mycenae.",
-        "createdAt": "1550-1500 BC",
-        "discoveredAt": "1876",
-        "discoveredBy": "Heinrich Schliemann",
-        "presentLocation": "National Archaeological Museum, Athens",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
-    },
-    {
-        "name": "Cyrus Cylinder",
-        "image": "https://en.wikipedia.org/wiki/File:Cyrus_Cylinder.jpg",
-        "type": "Clay Cylinder",
-        "historicalContext": "Ancient artifact considered the first declaration of human rights.",
-        "createdAt": "539 BC",
-        "discoveredAt": "1879",
-        "discoveredBy": "Hormuzd Rassam",
-        "presentLocation": "British Museum, London",
-        "adderName": "Siam Mahmud",
-        "adderEmail": "siammahmud66@gmail.com"
+        "presentLocation": "Unknown"
     }
 ]

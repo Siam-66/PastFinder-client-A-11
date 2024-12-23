@@ -3,6 +3,7 @@ import { data, useNavigate } from "react-router-dom";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 // import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
+import GoogleLoginButton from "./GoogleLoginButton";
 
 const Signup = () => {
     const { createNewUser  } = useContext(AuthContext);
@@ -118,6 +119,7 @@ const Signup = () => {
           </div>
 
         </form>
+        <GoogleLoginButton></GoogleLoginButton>
       </div>
     </div>
   );
