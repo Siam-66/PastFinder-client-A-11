@@ -11,28 +11,20 @@ const EmptyState = ({ title, message }) => (
 
 const MyArtifacts = () => {
     const [celestoras, setCelestoras] = useState([]);
-    const [loading, setLoading] = useState(true);
     const { user } = useAuth();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [currentArtifact, setCurrentArtifact] = useState(null);
 
     const fetchCelestoras = () => {
-        setLoading(true);
         fetch(`http://localhost:4000/celestora?email=${user.email}`)
             .then((res) => res.json())
-            .then((data) => {
-                setCelestoras(data);
-                setLoading(false);
-            })
-            .catch((error) => {
-                console.error("Fetch error:", error);
-                setLoading(false);
-            });
+            .then(setCelestoras)
+            .catch(console.error);
     };
 
     useEffect(() => {
-        fetchCelestoras();
-    }, [user.email]);
+        if (user?.email) fetchCelestoras();
+    }, [user?.email]);
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -45,101 +37,40 @@ const MyArtifacts = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:4000/celestora/${id}`, {
-                    method: "DELETE",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify({ userEmail: user.email }),
-                })
-                    .then((res) => {
-                        if (!res.ok) {
-                            throw new Error(`HTTP error! status: ${res.status}`);
-                        }
-                        return res.json();
+                fetch(`http://localhost:4000/celestora/${id}`, { method: "DELETE" })
+                    .then((res) => res.json())
+                    .then(() => {
+                        setCelestoras(celestoras.filter((item) => item._id !== id));
+                        Swal.fire("Deleted!", "Your artifact has been deleted.", "success");
                     })
-                    .then((data) => {
-                        if (data.deletedCount > 0) {
-                            Swal.fire({
-                                title: "Deleted!",
-                                text: "Your celestora has been deleted.",
-                                icon: "success",
-                            });
-                            setCelestoras(
-                                celestoras.filter(
-                                    (celestora) => celestora._id !== id
-                                )
-                            );
-                        } else {
-                            throw new Error("Failed to delete celestora");
-                        }
-                    })
-                    .catch((error) => {
-                        console.error("Delete error:", error);
-                        Swal.fire({
-                            title: "Error!",
-                            text: error.message || "Failed to delete celestora",
-                            icon: "error",
-                        });
-                    });
+                    .catch(() => Swal.fire("Error!", "Failed to delete artifact.", "error"));
             }
         });
     };
 
-    const handleUpdate = (artifact) => {
-        setCurrentArtifact(artifact);
-        setIsModalOpen(true);
-    };
-
-    const handleSubmit = (e) => {
+    const handleUpdate = (e) => {
         e.preventDefault();
-        const formData = new FormData(e.target);
-        const updatedArtifact = Object.fromEntries(formData.entries());
+        const id = currentArtifact._id;
+        const updatedCelestora = Object.fromEntries(new FormData(e.target).entries());
 
-        fetch(`http://localhost:4000/celestora/${currentArtifact._id}`, {
+        fetch(`http://localhost:4000/celestora/${id}`, {
             method: "PUT",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(updatedArtifact),
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(updatedCelestora),
         })
-            .then((res) => {
-                if (!res.ok) {
-                    throw new Error("Failed to update artifact");
-                }
-                return res.json();
-            })
-            .then((data) => {
-                Swal.fire({
-                    title: "Updated!",
-                    text: "Artifact details have been updated.",
-                    icon: "success",
-                });
-                fetchCelestoras();
+            .then((res) => res.json())
+            .then(() => {
                 setIsModalOpen(false);
+                fetchCelestoras();
+                Swal.fire("Success", "Artifact updated successfully!", "success");
             })
-            .catch((error) => {
-                console.error("Update error:", error);
-                Swal.fire({
-                    title: "Error!",
-                    text: error.message || "Failed to update artifact",
-                    icon: "error",
-                });
-            });
+            .catch(() => Swal.fire("Error!", "Failed to update artifact.", "error"));
     };
-
-    if (loading) {
-        return (
-            <div className="flex justify-center items-center min-h-[400px]">
-                <div className="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"></div>
-            </div>
-        );
-    }
 
     return (
         <div className="container mx-auto px-5 py-10">
             <h2 className="text-4xl text-center font-medium mb-10">
-                My Posted Celestoras: {celestoras.length}
+                My Add Artifacts
             </h2>
 
             {celestoras.length === 0 ? (
@@ -150,10 +81,7 @@ const MyArtifacts = () => {
             ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {celestoras.map((celestora) => (
-                        <div
-                            key={celestora._id}
-                            className="card bg-white shadow-xl rounded-lg"
-                        >
+                        <div key={celestora._id} className="card bg-white shadow-xl rounded-lg">
                             <figure className="p-4">
                                 <img
                                     src={celestora.image}
@@ -173,14 +101,28 @@ const MyArtifacts = () => {
                                     {celestora.createdAt}
                                 </p>
                                 <p className="text-gray-700 text-md ">
+                                    <strong>Discovered At:</strong>{" "}
+                                    {celestora.discoveredAt}
+                                </p>
+                                <p className="text-gray-700 text-md ">
                                     <strong>Discovered By:</strong>{" "}
                                     {celestora.discoveredBy}
                                 </p>
+                                <p className="text-gray-700 text-md ">
+                                    <strong>Present Location:</strong>{" "}
+                                    {celestora.presentLocation}
+                                </p>
+                                <p className="text-gray-700 text-md ">
+                                    <strong>Historical Context:</strong>{" "}
+                                    {celestora.historicalContext}
+                                </p>
+                                
                                 <div className="card-actions flex justify-around mt-5">
                                     <button
-                                        onClick={() =>
-                                            handleUpdate(celestora)
-                                        }
+                                    onClick={() => {
+                                        setCurrentArtifact(celestora);
+                                        setIsModalOpen(true);
+                                    }}
                                         className="btn bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white font-bold rounded-xl shadow-md hover:shadow-lg"
                                     >
                                         Update
@@ -201,12 +143,10 @@ const MyArtifacts = () => {
             )}
 
             {isModalOpen && (
-                <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center">
+                <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
                     <div className="bg-white rounded-xl p-6 w-[90%] max-w-lg shadow-lg">
-                        <h3 className="text-xl font-bold mb-4">
-                            Update Artifact
-                        </h3>
-                        <form onSubmit={handleSubmit}>
+                        <h2 className="text-xl font-bold mb-4">Update Artifact</h2>
+                        <form onSubmit={handleUpdate}>
     {/* Artifact Name */}
     <div className="mb-4">
     <label className="block font-semibold mb-2">Artifact Name</label>
@@ -337,7 +277,7 @@ const MyArtifacts = () => {
                                     Submit
                                 </button>
                             </div>
-                        </form>
+</form>
                     </div>
                 </div>
             )}
