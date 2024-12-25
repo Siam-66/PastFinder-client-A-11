@@ -9,7 +9,7 @@ const ErrorPage = () => {
 
         {/* Error Description */}
         <p className="text-2xl mt-4 text-center">
-          Oops! The page you're looking for doesn't exist.
+        You’re digging in the wrong place!
         </p>
   
         {/* Back Home Button */}

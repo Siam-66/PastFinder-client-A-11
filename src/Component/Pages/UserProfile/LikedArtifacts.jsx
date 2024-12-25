@@ -25,8 +25,27 @@ const LikedArtifacts = () => {
       });
   }, [user.email]);
 
+  // Handle unlike action
+  const handleUnlike = (id) => {
+    fetch(`http://localhost:4000/likedCelestora/${id}?email=${user.email}`, {
+      method: "DELETE",
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to unlike artifact");
+        return res.json();
+      })
+      .then(() => {
+        // Remove the artifact from the likedArtifacts list
+        setLikedArtifacts((prev) =>
+          prev.filter((artifact) => artifact.celestora_id !== id)
+        );
+      })
+      .catch((error) => console.error("Error unliking artifact:", error));
+  };
+
   return (
     <div className="p-6 min-h-screen bg-gray-100">
+                  <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">Liked Artifacts</h1>
       {loading ? (
         <p className="text-center text-xl font-bold">Loading your artifacts...</p>
       ) : likedArtifacts.length === 0 ? (
@@ -63,6 +82,12 @@ const LikedArtifacts = () => {
                 <p className="text-gray-700 text-md">
                   <strong>Historical Context:</strong> {artifact.historicalContext}
                 </p>
+                <button
+                  className="btn w-full bg-red-500 text-white text-md font-bold px-4 py-2 rounded-lg hover:bg-red-600 mt-4"
+                  onClick={() => handleUnlike(artifact.celestora_id)}
+                >
+                  Remove
+                </button>
               </div>
             </div>
           ))}

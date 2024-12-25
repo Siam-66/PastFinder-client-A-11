@@ -1,23 +1,45 @@
 import { useEffect, useState } from "react";
 import AllArtifactsCard from "./Cards/AllArtifactsCard";
+import { FiSearch } from "react-icons/fi";
+
+
 const AllArtifacts = () => {
+    const [celestoras, setCelestoras] = useState([]);
+    const [search, setSearch] = useState("");
 
-    const [celestoras, setCelestoras]=useState([]);
+    useEffect(() => {
+        fetchArtifacts();
+    }, [search]);
 
-    useEffect(()=>{
-        fetch('http://localhost:4000/celestora')
-        .then(res=>res.json())
-        .then(data=>{
-            setCelestoras(data);
-        })
-    },[])
+    const fetchArtifacts = () => {
+        fetch(`http://localhost:4000/celestora?search=${encodeURIComponent(search)}`)
+            .then((res) => res.json())
+            .then((data) => {
+                setCelestoras(data);
+            })
+            .catch((err) => console.error(err));
+    };
 
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
-            {
-                celestoras.map(celestora=><AllArtifactsCard key={celestora._id} celestora={celestora}>
-                </AllArtifactsCard>)
-            }
+        <div>
+            <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">AllArtifacts</h1>
+            <div className="p-4 flex items-center justify-center relative">
+            <FiSearch className="absolute mr-72"/>
+
+                <input
+                
+                    type="text"
+                    placeholder="Search by Artifact Name"
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    className="input input-bordered pl-8 w-full sm:w-1/2 lg:w-1/3"
+                />
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
+                {celestoras.map((celestora) => (
+                    <AllArtifactsCard key={celestora._id} celestora={celestora} />
+                ))}
+            </div>
         </div>
     );
 };

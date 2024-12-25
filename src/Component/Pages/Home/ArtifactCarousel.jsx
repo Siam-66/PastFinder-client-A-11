@@ -66,7 +66,7 @@ const ArtifactCarousel = () => {
                                 <h1 className="text-3xl md:text-5xl font-bold">{slide.title}</h1>
                                 <p className="mt-4 text-lg md:text-xl max-w-3xl">{slide.description}</p>
                                 <Link
-                                    to="/artifactDetails"
+                                    to="/allArtifacts"
                                     className="mt-6 px-6 py-2 btn bg-gradient-to-r from-yellow-950 via-orange-900 to-red-950 text-lg text-white font-bold rounded-lg border-yellow-950"
                                 >
                                     Explore Artifacts
