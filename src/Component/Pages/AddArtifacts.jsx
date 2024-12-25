@@ -97,18 +97,7 @@ const AddArtifacts = () => {
         <option value="Coins">Coins</option>        
     </select>
     </div>
-
-    {/* Historical Context */}
-    <div className="mb-4">
-    <label className="block font-semibold mb-2">Historical Context</label>
-    <textarea
-        name="historicalContext"
-        className="w-full p-2 border rounded"
-        placeholder="Provide the historical context of the artifact"
-        required
-    ></textarea>
-    </div>
-
+    
     {/* Created At */}
     <div className="mb-4">
     <label className="block font-semibold mb-2">Created At</label>
@@ -157,6 +146,16 @@ const AddArtifacts = () => {
     />
     </div>
 
+    {/* Historical Context */}
+    <div className="mb-4">
+    <label className="block font-semibold mb-2">Historical Context</label>
+    <textarea
+        name="historicalContext"
+        className="w-full p-2 border rounded"
+        placeholder="Provide the historical context of the artifact"
+        required
+    ></textarea>
+    </div>
     {/* User Name & Email */}
     <div className="form-control grid grid-cols-2 gap-4 mb-4">
     <div>
