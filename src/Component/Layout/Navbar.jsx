@@ -44,6 +44,7 @@ const linkDrop = (
       Liked Artifacts
     </NavLink>
   </li>
+  
   </>
 );
 
@@ -179,16 +180,33 @@ const linkDrop = (
     className="menu menu-sm dropdown-content bg-base-100 dark:bg-gray-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
   >
     {linkDrop}
+    <li className="w-28">
+    <button
+              onClick={logOut}
+              className="px-5 py-2 text-center rounded-3xl md:text-lg text-sm font-semibold border-yellow-800 hover:bg-gradient-to-r from-yellow-900 via-orange-800 to-red-900 text-black hover:text-white border"
+            >
+              Log Out
+            </button>
+    </li>
   </ul>
+  
 </div>
 
 
   
           ) : (
             
+            <div className="flex items-center gap-2">
             <FaUserCircle className="size-10  text-yellow-800" />
+            <NavLink
+              to="login"
+              className="px-5 py-2  rounded-3xl md:text-xl text-lg font-semibold bg-gradient-to-r from-yellow-900 via-orange-800 to-red-900 border text-white"
+            >
+              Log In
+            </NavLink>
+            </div>
           )}
-          {user?.email ? (
+          {/* {user?.email ? (
             <button
               onClick={logOut}
               className="px-5 py-2  rounded-3xl md:text-xl text-lg font-semibold border-yellow-800 hover:bg-gradient-to-r from-yellow-900 via-orange-800 to-red-900 text-black hover:text-white border"
@@ -202,7 +220,7 @@ const linkDrop = (
             >
               Log In
             </NavLink>
-          )}
+          )} */}
         </div>
 
       </div>
