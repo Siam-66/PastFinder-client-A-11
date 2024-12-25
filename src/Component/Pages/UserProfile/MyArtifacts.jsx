@@ -70,7 +70,7 @@ const MyArtifacts = () => {
     return (
         <div className="container mx-auto px-5 py-10">
             <h2 className="text-4xl text-center font-medium mb-10">
-                My Add Artifacts
+                My Added Artifacts
             </h2>
 
             {celestoras.length === 0 ? (
@@ -177,7 +177,7 @@ const MyArtifacts = () => {
     <div className="mb-4">
     <label className="block font-semibold mb-2">Artifact Type</label>
     <select
-        name=""
+        name="type"
         className="w-full p-2 border rounded"
         required
         defaultValue={currentArtifact.type}
