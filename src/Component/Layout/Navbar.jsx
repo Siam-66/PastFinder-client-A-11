@@ -180,7 +180,7 @@ const linkDrop = (
     className="menu menu-sm dropdown-content bg-base-100 dark:bg-gray-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
   >
     {linkDrop}
-    <li className="w-28">
+    <li className="w-28 mt-3 ml-10">
     <button
               onClick={logOut}
               className="px-5 py-2 text-center rounded-3xl md:text-lg text-sm font-semibold border-yellow-800 hover:bg-gradient-to-r from-yellow-900 via-orange-800 to-red-900 text-black hover:text-white border"

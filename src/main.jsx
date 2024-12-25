@@ -41,6 +41,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
                     <AddArtifacts />
                   </PrivateRoute>,
+                  
       },
       {
         path: '/artifactDetails/:id', 

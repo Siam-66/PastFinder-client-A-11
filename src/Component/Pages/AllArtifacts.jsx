@@ -24,7 +24,7 @@ const AllArtifacts = () => {
         <div>
             <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">AllArtifacts</h1>
             <div className="p-4 flex items-center justify-center relative">
-            <FiSearch className="absolute mr-72"/>
+            <FiSearch className="absolute lg:mr-[29rem] md:mr-[21rem] max-sm:mr-[26rem]"/>
 
                 <input
                 

@@ -176,5 +176,65 @@
         "discoveredAt": "Unknown (if it exists)",
         "discoveredBy": "Biblical accounts",
         "presentLocation": "Unknown"
+    },
+    {
+        "name": "Phaistos Disc",
+        "image": "https://www.worldhistory.org/img/r/p/1000x1200/364.jpg.webp?v=1625329803",
+        "type": "Clay Disc",
+        "historicalContext": "Ancient Minoan artifact with undeciphered symbols.",
+        "createdAt": "2nd millennium BC",
+        "discoveredAt": "1908",
+        "discoveredBy": "Luigi Pernier",
+        "presentLocation": "Heraklion Archaeological Museum, Crete, Greece",
+        "username": "Siam Mahmud",
+        "userEmail": "siammahmud66@gmail.com"
+    },
+    {
+        "name": "Lycurgus Cup",
+        "image": "https://romanempiretimes.com/content/images/size/w2000/format/avif/2024/01/1066957001-1.jpg",
+        "type": "Roman Glass",
+        "historicalContext": "Ancient Roman glass cup exhibiting dichroic properties.",
+        "createdAt": "4th century AD",
+        "discoveredAt": "1800s",
+        "discoveredBy": "Unknown",
+        "presentLocation": "British Museum, London",
+        "username": "Siam Mahmud",
+        "userEmail": "siammahmud66@gmail.com"
+    },
+    {
+        "name": "Disk of Enheduanna",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Disk_of_Enheduanna.JPG/800px-Disk_of_Enheduanna.JPG?20160408202506",
+        "type": "Stone Disk",
+        "historicalContext": "A Sumerian disk depicting Enheduanna, the earliest known poet.",
+        "createdAt": "2300 BC",
+        "discoveredAt": "1927",
+        "discoveredBy": "Leonard Woolley",
+        "presentLocation": "Penn Museum, Philadelphia",
+        "username": "Siam Mahmud",
+        "userEmail": "siammahmud66@gmail.com"
+    },
+    {
+        "name": "Mask of Agamemnon",
+        "image": "https://web.colby.edu/copiesfakesforgeries/files/2021/05/death-mask-of-agamemnon.jpeg",
+        "type": "Gold Mask",
+        "historicalContext": "Gold funerary mask attributed to King Agamemnon of Mycenae.",
+        "createdAt": "1550-1500 BC",
+        "discoveredAt": "1876",
+        "discoveredBy": "Heinrich Schliemann",
+        "presentLocation": "National Archaeological Museum, Athens",
+        "username": "Siam Mahmud",
+        "userEmail": "siammahmud66@gmail.com"
+    },
+    {
+        "name": "Cyrus Cylinder",
+        "image": "https://dustoffthebible.com/wp-content/uploads/2017/01/Cyrus-Cylinder-Display-1024x684.jpg",
+        "type": "Clay Cylinder",
+        "historicalContext": "Ancient artifact considered the first declaration of human rights.",
+        "createdAt": "539 BC",
+        "discoveredAt": "1879",
+        "discoveredBy": "Hormuzd Rassam",
+        "presentLocation": "British Museum, London",
+        "username": "Siam Mahmud",
+        "userEmail": "siammahmud66@gmail.com"
     }
 ]
