@@ -5,6 +5,7 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import GoogleLoginButton from "./GoogleLoginButton";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { userLogin, setUser } = useContext(AuthContext);
@@ -45,6 +46,9 @@ const Login = () => {
 
   return (
     <div className="flex items-center justify-center my-16 ">
+      <Helmet>
+          <title> Log in / Celestora</title>
+      </Helmet>
       <ToastContainer />
       <div className="card bg-base-200 w-full max-w-sm shrink-0">
         <form onSubmit={handleSubmit} className="card-body">

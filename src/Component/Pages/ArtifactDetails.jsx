@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { SlLike } from "react-icons/sl";
 import { SlDislike } from "react-icons/sl";
 import useAuth from "../../Provider/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const ArtifactDetails = () => {
     const {
@@ -34,6 +35,9 @@ const ArtifactDetails = () => {
     }, [id, user.email]);
 
     // Handle like action
+
+      
+
     const handleLike = () => {
         const likedArtifact = {
             celestora_id: id,
@@ -65,6 +69,8 @@ const ArtifactDetails = () => {
             .catch((error) => console.error("Error liking artifact:", error));
     };
 
+    
+
     // Handle unlike action
     const handleUnlike = () => {
         fetch(`http://localhost:4000/likedCelestora/${id}?email=${user.email}`, {
@@ -82,6 +88,10 @@ const ArtifactDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title> Artifact Details/All Artifacts/Celestora</title>
+            </Helmet>
+            <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">Artifact Details</h1>
             <div className="p-6 flex justify-center items-center bg-gray-100">
                 <div className="card bg-white shadow-xl rounded-lg w-full max-w-lg">
                     {/* Artifact Image */}

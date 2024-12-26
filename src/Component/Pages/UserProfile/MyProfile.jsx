@@ -2,13 +2,16 @@
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { useContext } from "react";
+import { Helmet } from "react-helmet-async";
 
 const MyProfile = () => {
 
     const {user}= useContext(AuthContext);
     return (
         <div className="container mx-auto px-4 py-8">
-
+<Helmet>
+    <title> My Profile / Celestora</title>
+</Helmet>
             <div className="max-w-lg mx-auto border-2 border-yellow-800 bg-base-100 rounded-lg shadow-xl p-6">
             <h1 className="mb-5 text-center text-3xl font-bold bg-gradient-to-r from-yellow-900 via-orange-500 to-red-900 bg-clip-text text-transparent">
                 Welcome back

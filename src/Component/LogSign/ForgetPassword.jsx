@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
+import { Helmet } from "react-helmet-async";
 
 const ForgetPassword = () => {
   const navigate = useNavigate();
@@ -29,6 +30,9 @@ const ForgetPassword = () => {
 
   return (
     <div className="flex items-center justify-center my-16 relative">
+      <Helmet>
+          <title> Forget Password / Celestora</title>
+      </Helmet>
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -50,7 +54,7 @@ const ForgetPassword = () => {
             <div className="text-green-600 text-sm mt-2">{success}</div>
           )}
           <div className="form-control mt-6">
-            <button className="btn text-xl bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 text-black font-semibold">
+            <button className="btn text-xl bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white font-semibold">
               Send Reset Email
             </button>
           </div>

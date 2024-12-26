@@ -1,6 +1,7 @@
 import Swal from 'sweetalert2'
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext } from 'react';
+import { Helmet } from 'react-helmet-async';
 
 
 const AddArtifacts = () => {
@@ -48,6 +49,9 @@ const AddArtifacts = () => {
     }
     return (
 <div className="max-w-4xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg"> 
+    <Helmet>
+        <title> Add Artifacts / Celestora</title>
+    </Helmet>
     <h2 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6">
     Add Artifact
     </h2>

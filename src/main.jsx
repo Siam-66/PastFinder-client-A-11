@@ -20,6 +20,7 @@ import MyProfile from './Component/Pages/UserProfile/MyProfile';
 import LikedArtifacts from './Component/Pages/UserProfile/LikedArtifacts';
 import MyArtifacts from './Component/Pages/UserProfile/MyArtifacts';
 import ArtifactDetails from './Component/Pages/ArtifactDetails';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -96,7 +97,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <AuthProvider>
+    <HelmetProvider>
     <RouterProvider router={router} />  
+    </HelmetProvider>
     </AuthProvider>
   </StrictMode>,
 )

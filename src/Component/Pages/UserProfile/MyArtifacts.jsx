@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../../Provider/useAuth";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const EmptyState = ({ title, message }) => (
     <div className="flex flex-col items-center justify-center py-12 px-4">
@@ -69,6 +70,9 @@ const MyArtifacts = () => {
 
     return (
         <div className="container mx-auto px-5 py-10">
+            <Helmet>
+                <title> My Artifacts /Celestora</title>
+            </Helmet>
             <h2 className="text-4xl text-center font-medium mb-10">
                 My Added Artifacts
             </h2>

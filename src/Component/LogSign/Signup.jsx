@@ -4,6 +4,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 // import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import GoogleLoginButton from "./GoogleLoginButton";
+import { Helmet } from "react-helmet-async";
 
 const Signup = () => {
     const { createNewUser , updateUserProfile } = useContext(AuthContext);
@@ -67,6 +68,9 @@ const Signup = () => {
     
   return (
     <div className="flex items-center justify-center my-16 ">
+      <Helmet>
+          <title> Sign up / Celestora</title>
+      </Helmet>
       <div className="card bg-base-200 w-full max-w-sm shrink-0">
         <form onSubmit={handleSubmit} className="card-body">
 

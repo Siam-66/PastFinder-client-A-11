@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useAuth from "../../../Provider/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const LikedArtifacts = () => {
   const { user } = useAuth(); // Fetch the authenticated user's email
@@ -45,7 +46,10 @@ const LikedArtifacts = () => {
 
   return (
     <div className="p-6 min-h-screen bg-gray-100">
-                  <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">Liked Artifacts</h1>
+      <Helmet>
+          <title> My Liked Artifacts / Celestora</title>
+      </Helmet>
+          <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">Liked Artifacts</h1>
       {loading ? (
         <p className="text-center text-xl font-bold">Loading your artifacts...</p>
       ) : likedArtifacts.length === 0 ? (

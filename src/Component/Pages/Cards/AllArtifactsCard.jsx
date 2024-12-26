@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const AllArtifactsCard = ({ celestora }) => {
-    const { _id,name, image, type, historicalContext } = celestora;
+    const { _id,name, image, type, historicalContext,likeCount } = celestora;
 
 return (
     <div className="card bg-base-100 shadow-xl">
@@ -16,6 +16,9 @@ return (
 
     <div className="card-body">
         <h2 className="card-title">{name}</h2>
+        <p className="text-sm">
+        <strong>Like:</strong> {likeCount}
+        </p>
         <p className="text-sm">
         <strong>Type:</strong> {type}
         </p>
