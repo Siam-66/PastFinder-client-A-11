@@ -9,7 +9,7 @@ const TopLikedArtifacts = () => {
     useEffect(() => {
         const fetchTopLikedArtifacts = async () => {
             try {
-                const response = await fetch("http://localhost:4000/api/top-liked");
+                const response = await fetch("https://assignment-11-past-finder-server.vercel.app/api/top-liked");
                 if (!response.ok) {
                     throw new Error("Failed to fetch data");
                 }

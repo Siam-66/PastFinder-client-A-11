@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
                     <ArtifactDetails />
                   </PrivateRoute>,
-        loader:({params}) => fetch(`http://localhost:4000/celestora/${params.id}`),
+        loader:({params}) => fetch(`https://assignment-11-past-finder-server.vercel.app/celestora/${params.id}`),
       },
       {
         path: "aboutUs", 

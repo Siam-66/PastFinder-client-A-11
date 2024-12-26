@@ -25,7 +25,7 @@ const ArtifactDetails = () => {
 
     // Fetch initial liked status
     useEffect(() => {
-        fetch(`http://localhost:4000/likedCelestora/${id}?email=${user.email}`)
+        fetch(`https://assignment-11-past-finder-server.vercel.app/likedCelestora/${id}?email=${user.email}`)
             .then((res) => res.json())
             .then((data) => {
                 if (data.liked) {
@@ -53,7 +53,7 @@ const ArtifactDetails = () => {
             presentLocation,
         };
 
-        fetch('http://localhost:4000/likedCelestora', {
+        fetch('https://assignment-11-past-finder-server.vercel.app/likedCelestora', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ const ArtifactDetails = () => {
 
     // Handle unlike action
     const handleUnlike = () => {
-        fetch(`http://localhost:4000/likedCelestora/${id}?email=${user.email}`, {
+        fetch(`https://assignment-11-past-finder-server.vercel.app/likedCelestora/${id}?email=${user.email}`, {
             method: 'DELETE',
         })
             .then((res) => {

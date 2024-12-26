@@ -17,7 +17,7 @@ const MyArtifacts = () => {
     const [currentArtifact, setCurrentArtifact] = useState(null);
 
     const fetchCelestoras = () => {
-        fetch(`http://localhost:4000/celestora?email=${user.email}`)
+        fetch(`https://assignment-11-past-finder-server.vercel.app/celestora?email=${user.email}`)
             .then((res) => res.json())
             .then(setCelestoras)
             .catch(console.error);
@@ -38,7 +38,7 @@ const MyArtifacts = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:4000/celestora/${id}`, { method: "DELETE" })
+                fetch(`https://assignment-11-past-finder-server.vercel.app/celestora/${id}`, { method: "DELETE" })
                     .then((res) => res.json())
                     .then(() => {
                         setCelestoras(celestoras.filter((item) => item._id !== id));
@@ -54,7 +54,7 @@ const MyArtifacts = () => {
         const id = currentArtifact._id;
         const updatedCelestora = Object.fromEntries(new FormData(e.target).entries());
 
-        fetch(`http://localhost:4000/celestora/${id}`, {
+        fetch(`https://assignment-11-past-finder-server.vercel.app/celestora/${id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedCelestora),

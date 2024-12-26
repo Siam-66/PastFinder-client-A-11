@@ -1,4 +1,5 @@
 import { Fade } from "react-awesome-reveal";
+
 const WhyChoose = () => {
     return (
         <div className="mt-5">
@@ -7,7 +8,7 @@ const WhyChoose = () => {
                     <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
                         Why Choose Us?
                     </h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
                             {
                                 title: "Expert Insights",
@@ -24,6 +25,11 @@ const WhyChoose = () => {
                                 description:
                                     "Our platform is backed by research and historical accuracy.",
                                 icon: "📚",
+                            },
+                            {
+                                title: "Global Community",
+                                description: "Connect with history enthusiasts from around the world.",
+                                icon: "🌍",
                             },
                         ].map((benefit, index) => (
                             <Fade key={index} triggerOnce>

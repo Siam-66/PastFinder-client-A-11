@@ -11,7 +11,7 @@ const LikedArtifacts = () => {
     if (!user?.email) return;
 
     // Fetch liked artifacts based on the user's email
-    fetch(`http://localhost:4000/likedCelestora?email=${user.email}`)
+    fetch(`https://assignment-11-past-finder-server.vercel.app/likedCelestora?email=${user.email}`)
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch liked artifacts");
         return res.json();
@@ -28,7 +28,7 @@ const LikedArtifacts = () => {
 
   // Handle unlike action
   const handleUnlike = (id) => {
-    fetch(`http://localhost:4000/likedCelestora/${id}?email=${user.email}`, {
+    fetch(`https://assignment-11-past-finder-server.vercel.app/likedCelestora/${id}?email=${user.email}`, {
       method: "DELETE",
     })
       .then((res) => {

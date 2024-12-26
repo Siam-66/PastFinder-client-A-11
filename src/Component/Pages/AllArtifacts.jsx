@@ -13,7 +13,7 @@ const AllArtifacts = () => {
     }, [search]);
 
     const fetchArtifacts = () => {
-        fetch(`http://localhost:4000/celestora?search=${encodeURIComponent(search)}`)
+        fetch(`https://assignment-11-past-finder-server.vercel.app/celestora?search=${encodeURIComponent(search)}`)
             .then((res) => res.json())
             .then((data) => {
                 setCelestoras(data);

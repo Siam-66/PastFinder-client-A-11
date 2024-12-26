@@ -26,7 +26,7 @@ const AddArtifacts = () => {
             console.log(newCelestora);
 
 
-            fetch('http://localhost:4000/celestora',{
+            fetch('https://assignment-11-past-finder-server.vercel.app/celestora',{
                 method:'POST',
                 headers:{
                     'content-type':'application/json'

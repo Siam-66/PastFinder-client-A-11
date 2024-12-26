@@ -1,7 +1,7 @@
 # Celestora: Historical Artifacts Tracker 🌌
 
 ## 🌐 Live Website Link
-[**Live Link/**](https://sunflower-66.netlify.app/)
+[**Live Link/**](https://celestora.netlify.app/)
 
 Explore the Celestora platform online! Click the link to view the live application and start tracking historical artifacts today.
 
