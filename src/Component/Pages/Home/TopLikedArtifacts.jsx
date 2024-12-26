@@ -9,7 +9,7 @@ const TopLikedArtifacts = () => {
     useEffect(() => {
         const fetchTopLikedArtifacts = async () => {
             try {
-                const response = await fetch("https://assignment-11-past-finder-server.vercel.app/api/top-liked");
+                const response = await fetch('https://assignment-11-past-finder-server.vercel.app/celestora?limit=6');
                 if (!response.ok) {
                     throw new Error("Failed to fetch data");
                 }
@@ -35,7 +35,7 @@ const TopLikedArtifacts = () => {
                 {artifacts.map((artifact) => (
                     <div key={artifact._id} className="p-4 bg-white shadow-lg rounded-lg">
                         <img
-                            src={artifact.image || "https://via.placeholder.com/150"}
+                            src={artifact.image }
                             alt={artifact.name}
                             className="w-full h-40 object-cover rounded-t-lg"
                         />

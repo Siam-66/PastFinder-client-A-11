@@ -37,7 +37,6 @@ const ArtifactDetails = () => {
 
     // Handle like action
 
-      
 
     const handleLike = () => {
         const likedArtifact = {
@@ -60,10 +59,7 @@ const ArtifactDetails = () => {
             },
             body: JSON.stringify(likedArtifact),
         })
-            .then((res) => {
-                if (!res.ok) throw new Error("Failed to like artifact");
-                return res.json();
-            })
+        .then((res) => res.json())
             .then(() => {
                 setIsLiked(true);
             })
@@ -73,6 +69,10 @@ const ArtifactDetails = () => {
     
 
     // Handle unlike action
+    
+    
+    
+    
     const handleUnlike = () => {
         fetch(`https://assignment-11-past-finder-server.vercel.app/likedCelestora/${id}?email=${user.email}`, {
             method: 'DELETE',
