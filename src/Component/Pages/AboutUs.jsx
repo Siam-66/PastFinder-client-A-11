@@ -1,11 +1,12 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
     <div className="bg-gray-50 py-16">
             <Helmet>
-                <title> About Us / Celestora</title>
+                <title> AboutUs / Celestora</title>
             </Helmet>
       {/* Hero Section */}
       <section className="container mx-auto px-6 text-center">
@@ -13,7 +14,7 @@ const AboutUs = () => {
           About <span className=" bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent">Celestora</span>
         </h1>
         <p className="mt-6 text-lg text-gray-600">
-          Celestora is your gateway to the fascinating world of historical artifacts. <br className="max-lg:hidden max-sm:hidden " /> From the
+          Celestora is your gateway to the fascinating world of historical artifacts.  From the
           Rosetta Stone to the Antikythera Mechanism, <br className="max-md:hidden max-sm:hidden" />explore, learn, and contribute to preserving
           history.
         </p>
@@ -92,13 +93,13 @@ const AboutUs = () => {
       {/* Call-to-Action Section */}
       <section className="container mx-auto px-6 mt-16 bg-gradient-to-r from-yellow-950 via-orange-900 to-red-950 text-white rounded-lg py-12 text-center">
         <h2 className="text-3xl font-bold">Join the Celestora Journey</h2>
-        <p className="mt-4 text-lg">
+        <p className="mt-4 mb-7 text-lg">
           Help us preserve the stories of historical artifacts. Sign up today and contribute to
           history.
         </p>
-        <button className="mt-6 px-8 py-3 bg-white text-yellow-900 font-bold rounded-lg hover:bg-gray-100">
+        <Link to={"/signup"}  className=" px-8 py-3 bg-white text-yellow-900 font-bold rounded-lg hover:bg-gray-100">
           Get Started
-        </button>
+        </Link>
       </section>
     </div>
   );

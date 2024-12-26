@@ -10,7 +10,6 @@ const Home = () => {
             <Helmet>
                 <title>Home / Celestora</title>
             </Helmet>
-
             <ArtifactCarousel></ArtifactCarousel>
             <TopLikedArtifacts></TopLikedArtifacts>
             <TimelineSection></TimelineSection>

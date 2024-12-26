@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet-async";
 
 const ArtifactDetails = () => {
     const {
+        likeCount,
         name,
         image,
         type,
@@ -106,15 +107,17 @@ const ArtifactDetails = () => {
                     {/* Artifact Details */}
                     <div className="card-body p-6">
                         <h1 className="card-title text-3xl font-bold mb-4">{name}</h1>
-
+                        <p className="text-sm">
+                            <strong>Like:</strong> {likeCount}
+                        </p>
                         {/* Artifact Info */}
                         <p className="text-lg"><strong>Type:</strong> {type}</p>
-                        <p className="text-lg"><strong>Historical Context:</strong> {historicalContext}</p>
+
                         <p className="text-lg"><strong>Created At:</strong> {createdAt}</p>
                         <p className="text-lg"><strong>Discovered At:</strong> {discoveredAt}</p>
                         <p className="text-lg"><strong>Discovered By:</strong> {discoveredBy}</p>
                         <p className="text-lg"><strong>Present Location:</strong> {presentLocation}</p>
-
+                        <p className="text-lg"><strong>Historical Context:</strong> {historicalContext}</p>
                         {/* Like and Unlike Buttons */}
                         <div className="flex flex-col items-center mt-6">
                             {isLiked ? (
