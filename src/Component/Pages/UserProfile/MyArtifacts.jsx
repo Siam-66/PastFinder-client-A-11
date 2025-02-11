@@ -17,7 +17,7 @@ const MyArtifacts = () => {
     const [currentArtifact, setCurrentArtifact] = useState(null);
 
     const fetchCelestoras = () => {
-        fetch(`https://assignment-11-past-finder-server.vercel.app/celestora?email=${user.email}`)
+        fetch(`https://assignment-11-past-finder-server.vercel.app/emailCelestora?email=${user.email}`)
             .then((res) => res.json())
             .then(setCelestoras)
             .catch(console.error);

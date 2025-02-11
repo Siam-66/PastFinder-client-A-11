@@ -3,17 +3,31 @@ import AllArtifactsCard from "./Cards/AllArtifactsCard";
 import { FiSearch } from "react-icons/fi";
 import { Helmet } from "react-helmet-async";
 
-
 const AllArtifacts = () => {
     const [celestoras, setCelestoras] = useState([]);
     const [search, setSearch] = useState("");
 
     useEffect(() => {
-        fetchArtifacts();
+        if (search) {
+            fetchSearchResults(); // Fetch filtered data when search is active
+        } else {
+            fetchAllArtifacts(); // Fetch all data when search is empty
+        }
     }, [search]);
 
-    const fetchArtifacts = () => {
-        fetch(`https://assignment-11-past-finder-server.vercel.app/celestora?search=${encodeURIComponent(search)}`)
+    // Fetch all artifacts
+    const fetchAllArtifacts = () => {
+        fetch("https://assignment-11-past-finder-server.vercel.app/celestoras")
+            .then((res) => res.json())
+            .then((data) => {
+                setCelestoras(data);
+            })
+            .catch((err) => console.error(err));
+    };
+
+    // Fetch search results
+    const fetchSearchResults = () => {
+        fetch(`https://assignment-11-past-finder-server.vercel.app/celestoras/search?search=${encodeURIComponent(search)}`)
             .then((res) => res.json())
             .then((data) => {
                 setCelestoras(data);
@@ -23,15 +37,15 @@ const AllArtifacts = () => {
 
     return (
         <div>
-<Helmet>
-    <title> All Artifacts / Celestora</title>
-</Helmet>
-            <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">All Artifacts</h1>
+            <Helmet>
+                <title> All Artifacts / Celestora</title>
+            </Helmet>
+            <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">
+                All Artifacts
+            </h1>
             <div className="p-4 flex items-center justify-center relative">
-            <FiSearch className="absolute lg:mr-[29rem] md:mr-[21rem] max-sm:mr-[26rem]"/>
-
+                <FiSearch className="absolute lg:mr-[29rem] md:mr-[21rem] max-sm:mr-[26rem]" />
                 <input
-                
                     type="text"
                     placeholder="Search by Artifact Name"
                     value={search}

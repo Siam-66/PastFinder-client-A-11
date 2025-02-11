@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-
 const TopLikedArtifacts = () => {
     const [artifacts, setArtifacts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
     useEffect(() => {
         const fetchTopLikedArtifacts = async () => {
             try {
-                const response = await fetch('https://assignment-11-past-finder-server.vercel.app/celestora?limit=6');
+                const response = await fetch("https://assignment-11-past-finder-server.vercel.app/topCelestora?limit=6");
                 if (!response.ok) {
                     throw new Error("Failed to fetch data");
                 }
@@ -21,13 +19,10 @@ const TopLikedArtifacts = () => {
                 setLoading(false);
             }
         };
-
         fetchTopLikedArtifacts();
     }, []);
-
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error}</p>;
-
     return (
         <section className="my-16">
             <h2 className="text-4xl font-bold text-center mb-6">Top Liked Artifacts</h2>
@@ -35,7 +30,7 @@ const TopLikedArtifacts = () => {
                 {artifacts.map((artifact) => (
                     <div key={artifact._id} className="p-4 bg-white shadow-lg rounded-lg">
                         <img
-                            src={artifact.image }
+                            src={artifact.image || "https://via.placeholder.com/150"}
                             alt={artifact.name}
                             className="w-full h-40 object-cover rounded-t-lg"
                         />
@@ -51,7 +46,6 @@ const TopLikedArtifacts = () => {
                         </div>
                     </div>
                 ))}
-
                 
             </div>
             <div className="flex items-center justify-center mt-10">
@@ -60,5 +54,4 @@ const TopLikedArtifacts = () => {
         </section>
     );
 };
-
 export default TopLikedArtifacts;

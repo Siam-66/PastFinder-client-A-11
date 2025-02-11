@@ -69,10 +69,6 @@ const ArtifactDetails = () => {
     
 
     // Handle unlike action
-    
-    
-    
-    
     const handleUnlike = () => {
         fetch(`https://assignment-11-past-finder-server.vercel.app/likedCelestora/${id}?email=${user.email}`, {
             method: 'DELETE',
