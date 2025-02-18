@@ -45,13 +45,13 @@ const ArtifactCarousel = () => {
     };
 
     return (
-        <div className="relative">
+<div className="relative w-full overflow-hidden">
             <Slider {...settings}>
                 {slides.map((slide, index) => (
-                    <div key={index} className="relative h-[400px] md:h-[600px]">
+                    <div key={index} className="relative h-[400px] md:h-[600px] w-full">
                         {/* Background Img */}
                         <div
-                            className="absolute inset-0"
+                            className="absolute inset-0 w-full"
                             style={{
                                 backgroundImage: `url(${slide.background})`,
                                 backgroundSize: "cover",
@@ -61,13 +61,13 @@ const ArtifactCarousel = () => {
                         {/* Dark Overlay */}
                         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
                         {/* Content */}
-                        <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-4 text-white">
+                        <div className="relative z-10 flex flex-col justify-center items-center text-center h-full px-2 sm:px-4 text-white">
                             <Slide direction="down" triggerOnce>
-                                <h1 className="text-3xl md:text-5xl font-bold">{slide.title}</h1>
-                                <p className="mt-4 text-lg md:text-xl max-w-3xl">{slide.description}</p>
+                                <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold">{slide.title}</h1>
+                                <p className="mt-4 text-base sm:text-lg md:text-xl max-w-[90%] sm:max-w-3xl">{slide.description}</p>
                                 <Link
                                     to="/allArtifacts"
-                                    className="mt-6 px-6 py-2 btn bg-gradient-to-r from-yellow-950 via-orange-900 to-red-950 text-lg text-white font-bold rounded-lg border-yellow-950"
+                                    className="mt-6 px-4 sm:px-6 py-2 btn bg-gradient-to-r from-yellow-950 via-orange-900 to-red-900 text-base sm:text-lg text-white font-bold rounded-lg border-yellow-950"
                                 >
                                     Explore Artifacts
                                 </Link>

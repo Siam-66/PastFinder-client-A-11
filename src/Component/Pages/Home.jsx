@@ -4,18 +4,24 @@ import TimelineSection from "./Home/TimelineSection ";
 import TopLikedArtifacts from "./Home/TopLikedArtifacts";
 import WhyChoose from "./Home/WhyChoose";
 import StatsSection from "./Home/StatsSection";
+import ContributorSpotlight from "./Home/ContributorSpotlight";
+import VlogPreview from "./Home/VlogPreview";
 
 const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>Home / Celestora</title>
+                <title>Celestora</title>
             </Helmet>
             
             <ArtifactCarousel></ArtifactCarousel>
             <TopLikedArtifacts></TopLikedArtifacts>
-            <StatsSection></StatsSection>
             <TimelineSection></TimelineSection>
+            <VlogPreview></VlogPreview>
+            <StatsSection></StatsSection>
+            <ContributorSpotlight></ContributorSpotlight>
+
+            
             <WhyChoose></WhyChoose>
         </div>
     );

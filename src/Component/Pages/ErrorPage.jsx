@@ -1,6 +1,6 @@
 const ErrorPage = () => {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+      <div className="flex flex-col  items-center justify-center min-h-screen bg-gray-900 text-white">
         {/* Glowing 404 Text */}
         <h1 className="text-9xl font-extrabold text-center animate-glow relative">
           404

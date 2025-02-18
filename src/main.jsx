@@ -11,6 +11,7 @@ import Home from "./Component/Pages/Home";
 import AllArtifacts from "./Component/Pages/AllArtifacts";
 import AddArtifacts from "./Component/Pages/AddArtifacts";
 import AboutUs from "./Component/Pages/AboutUs";
+import VlogPage from "./Component/Pages/VlogPage";
 import AuthProvider from './Provider/AuthProvider';
 import PrivateRoute from './routes/PrivateRoute';
 import Signup from './Component/LogSign/Signup';
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
                     <ArtifactDetails />
                   </PrivateRoute>,
         loader:({params}) => fetch(`https://assignment-11-past-finder-server.vercel.app/celestora/${params.id}`),
+      },
+      {
+        path: "vlogPage", 
+        element: <VlogPage /> ,
       },
       {
         path: "aboutUs", 

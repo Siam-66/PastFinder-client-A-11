@@ -69,7 +69,7 @@ const MyArtifacts = () => {
     };
 
     return (
-        <div className="container mx-auto px-5 py-10">
+        <div className="container mx-auto px-5 py-10 ">
             <Helmet>
                 <title> My Artifacts /Celestora</title>
             </Helmet>
@@ -85,7 +85,7 @@ const MyArtifacts = () => {
             ) : (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {celestoras.map((celestora) => (
-                        <div key={celestora._id} className="card bg-white shadow-xl rounded-lg">
+                        <div key={celestora._id} className="card bg-white shadow-xl rounded-lg  dark:bg-gray-700 text-black dark:text-white">
                             <figure className="p-4">
                                 <img
                                     src={celestora.image}
@@ -94,29 +94,29 @@ const MyArtifacts = () => {
                                 />
                             </figure>
                             <div className="card-body p-4">
-                                <h2 className="card-title text-2xl font-bold ">
+                                <h2 className="card-title text-2xl font-bold dark:text-gray-300">
                                     {celestora.name}
                                 </h2>
-                                <p className="text-gray-700 text-md ">
+                                <p className="text-gray-700 text-md dark:text-gray-300">
                                     <strong>Type:</strong> {celestora.type}
                                 </p>
-                                <p className="text-gray-700 text-md ">
+                                <p className="text-gray-700 text-md dark:text-gray-300">
                                     <strong>Created At:</strong>{" "}
                                     {celestora.createdAt}
                                 </p>
-                                <p className="text-gray-700 text-md ">
+                                <p className="text-gray-700 text-md dark:text-gray-300">
                                     <strong>Discovered At:</strong>{" "}
                                     {celestora.discoveredAt}
                                 </p>
-                                <p className="text-gray-700 text-md ">
+                                <p className="text-gray-700 text-md dark:text-gray-300">
                                     <strong>Discovered By:</strong>{" "}
                                     {celestora.discoveredBy}
                                 </p>
-                                <p className="text-gray-700 text-md ">
+                                <p className="text-gray-700 text-md dark:text-gray-300">
                                     <strong>Present Location:</strong>{" "}
                                     {celestora.presentLocation}
                                 </p>
-                                <p className="text-gray-700 text-md ">
+                                <p className="text-gray-700 text-md dark:text-gray-300">
                                     <strong>Historical Context:</strong>{" "}
                                     {celestora.historicalContext}
                                 </p>

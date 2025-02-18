@@ -29,7 +29,7 @@ const ForgetPassword = () => {
   };
 
   return (
-    <div className="flex items-center justify-center my-16 relative">
+    <div className="flex container mx-auto items-center justify-center my-16 relative">
       <Helmet>
           <title> Forget Password / Celestora</title>
       </Helmet>
@@ -54,7 +54,7 @@ const ForgetPassword = () => {
             <div className="text-green-600 text-sm mt-2">{success}</div>
           )}
           <div className="form-control mt-6">
-            <button className="btn text-xl bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-white font-semibold">
+            <button className="btn text-xl bg-gradient-to-r from-yellow-950  to-orange-700 text-white font-semibold">
               Send Reset Email
             </button>
           </div>

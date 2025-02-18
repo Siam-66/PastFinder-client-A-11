@@ -84,13 +84,16 @@ const ArtifactDetails = () => {
     };
 
     return (
-        <div>
+        <div className="container mx-auto  ">
             <Helmet>
-                <title> Artifact Details/All Artifacts/Celestora</title>
+                <title> Artifact Details/Celestora</title>
             </Helmet>
+            <div className="bg-white dark:bg-gray-800 text-black dark:text-white">
+
+            
             <h1 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6 mt-10 ">Artifact Details</h1>
-            <div className="p-6 flex justify-center items-center bg-gray-100">
-                <div className="card bg-white shadow-xl rounded-lg w-full max-w-lg">
+            <div className="p-6 flex justify-center items-center  bg-white dark:bg-gray-800 text-black dark:text-white">
+                <div className="card shadow-xl rounded-lg w-full max-w-lg bg-white dark:bg-gray-700 text-black dark:text-white">
                     {/* Artifact Image */}
                     <figure className="p-6">
                         <img
@@ -140,6 +143,7 @@ const ArtifactDetails = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 };

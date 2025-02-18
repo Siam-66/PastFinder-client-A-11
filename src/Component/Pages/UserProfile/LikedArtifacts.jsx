@@ -45,7 +45,7 @@ const LikedArtifacts = () => {
   };
 
   return (
-    <div className="p-6 min-h-screen bg-gray-100">
+    <div className="p-6 min-h-screen container mx-auto  bg-white dark:bg-gray-800 text-black dark:text-white">
       <Helmet>
           <title> My Liked Artifacts / Celestora</title>
       </Helmet>
@@ -61,7 +61,7 @@ const LikedArtifacts = () => {
           {likedArtifacts.map((artifact) => (
             <div
               key={artifact.celestora_id}
-              className="card bg-white shadow-xl rounded-lg"
+              className="card bg-white shadow-xl rounded-lg dark:bg-gray-700"
             >
               <figure className="p-4">
                 <img
@@ -71,19 +71,19 @@ const LikedArtifacts = () => {
                 />
               </figure>
               <div className="card-body p-4">
-                <h2 className="card-title text-2xl font-bold mb-2">
+                <h2 className="card-title text-2xl font-bold mb-2 dark:text-gray-300">
                   {artifact.name}
                 </h2>
-                <p className="text-gray-700 text-md mb-2">
+                <p className="text-gray-700 text-md mb-2 dark:text-gray-400">
                   <strong>Type:</strong> {artifact.type}
                 </p>
-                <p className="text-gray-700 text-md mb-2">
+                <p className="text-gray-700 text-md mb-2 dark:text-gray-400">
                   <strong>Discovered By:</strong> {artifact.discoveredBy}
                 </p>
-                <p className="text-gray-700 text-md mb-2">
+                <p className="text-gray-700 text-md mb-2 dark:text-gray-400">
                   <strong>Location:</strong> {artifact.presentLocation}
                 </p>
-                <p className="text-gray-700 text-md">
+                <p className="text-gray-700 text-md dark:text-gray-400">
                   <strong>Historical Context:</strong> {artifact.historicalContext}
                 </p>
                 <button

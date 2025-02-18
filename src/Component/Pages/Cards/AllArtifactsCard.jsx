@@ -4,7 +4,7 @@ const AllArtifactsCard = ({ celestora }) => {
     const { _id,name, image, type, historicalContext,likeCount } = celestora;
 
 return (
-    <div className="card bg-base-100 shadow-xl">
+    <div className="card bg-base-100 shadow-xl dark:bg-gray-700">
 
     <figure>
         <img
@@ -29,7 +29,7 @@ return (
 
         <Link
             to={`/artifactDetails/${_id}`}
-            className="btn bg-gradient-to-r from-yellow-900 via-orange-900 to-red-900 text-lg text-white font-bold rounded-xl"
+            className="btn bg-gradient-to-r from-yellow-950  to-orange-700 text-lg text-white font-bold rounded-xl"
         >
             View Details
         </Link>

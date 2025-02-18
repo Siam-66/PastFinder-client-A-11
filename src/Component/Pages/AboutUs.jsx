@@ -4,16 +4,16 @@ import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-50 py-16">
+    <div className=" py-16 container mx-auto bg-white dark:bg-gray-800 text-black dark:text-white">
             <Helmet>
                 <title> AboutUs / Celestora</title>
             </Helmet>
       {/* Hero Section */}
       <section className="container mx-auto px-6 text-center">
-        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl dark:text-gray-200">
           About <span className=" bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent">Celestora</span>
         </h1>
-        <p className="mt-6 text-lg text-gray-600">
+        <p className="mt-6 text-lg text-gray-600 dark:text-gray-400">
           Celestora is your gateway to the fascinating world of historical artifacts.  From the
           Rosetta Stone to the Antikythera Mechanism, <br className="max-md:hidden max-sm:hidden" />explore, learn, and contribute to preserving
           history.
@@ -45,45 +45,45 @@ const AboutUs = () => {
 
       {/* Team Section */}
       <section className="container mx-auto px-6 mt-16">
-        <h2 className="text-2xl font-bold text-center text-gray-800">Meet Our Team</h2>
+        <h2 className="text-2xl font-bold text-center text-gray-800 dark:text-gray-200">Meet Our Team</h2>
         <div className="grid gap-8 mt-8 sm:grid-cols-2 lg:grid-cols-3">
           {/* Team Member 1 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-700">
             <img
               className="w-full h-56 object-cover"
               src="https://static1.dualshockersimages.com/wordpress/wp-content/uploads/2024/01/solo-leveling-anime-to-premiere-this-week-on-crunchyroll.jpg?q=50&fit=crop&w=750&h=422&dpr=1.5"
               alt="Team Member"
             />
             <div className="p-6">
-              <h3 className="text-lg font-bold text-gray-800">Siam Mahmud</h3>
-              <p className="text-sm text-yellow-800">Lead Historian</p>
+              <h3 className="text-lg font-bold text-gray-800 dark:text-gray-300">Siam Mahmud</h3>
+              <p className="text-sm text-yellow-800 dark:text-orange-600">Lead Historian</p>
             </div>
           </div>
 
           {/* Team Member 2 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-700">
             <img
               className="w-full h-56 object-cover"
               src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*by-ZjRm4e-BIM9ZUh4Stlg.png"
               alt="Team Member"
             />
             <div className="p-6">
-              <h3 className="text-lg font-bold text-gray-800">Afrin Riha</h3>
-              <p className="text-sm text-yellow-800">Artifact Curator</p>
+              <h3 className="text-lg font-bold text-gray-800 dark:text-gray-300">Afrin Riha</h3>
+              <p className="text-sm text-yellow-800 dark:text-orange-600">Artifact Curator</p>
             </div>
           </div>
 
 
           {/* Team Member 3 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden">
+          <div className="bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-700">
             <img
               className="w-full h-56 object-cover"
               src="https://wallpapers.com/images/featured/goku-background-vhm3f71ddueli0kl.jpg"
               alt="Team Member"
             />
             <div className="p-6">
-              <h3 className="text-lg font-bold text-gray-800">Ornob Addi</h3>
-              <p className="text-sm text-yellow-800">UI/UX Designer</p>
+              <h3 className="text-lg font-bold text-gray-800 dark:text-gray-300">Ornob Addi</h3>
+              <p className="text-sm text-yellow-800 dark:text-orange-600">UI/UX Designer</p>
             </div>
           </div>
 

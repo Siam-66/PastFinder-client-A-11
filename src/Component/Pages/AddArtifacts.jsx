@@ -48,14 +48,14 @@ const AddArtifacts = () => {
             })
     }
     return (
-<div className="max-w-4xl mx-auto bg-gray-100 p-8 rounded-lg shadow-lg"> 
+<div className="max-w-4xl  p-8 rounded-lg shadow-lg container mx-auto bg-white dark:bg-gray-800 text-black dark:text-white"> 
     <Helmet>
         <title> Add Artifacts / Celestora</title>
     </Helmet>
     <h2 className="text-5xl bg-gradient-to-r from-yellow-950 via-orange-700 to-red-900 bg-clip-text text-transparent font-bold text-center mb-6">
     Add Artifact
     </h2>
-<form onSubmit={handleSubmit}>  
+<form onSubmit={handleSubmit} className='bg-white dark:bg-gray-800 text-black dark:text-white'>  
     {/* Artifact Name */}
     <div className="mb-4">
     <label className="block font-semibold mb-2">Artifact Name</label>
